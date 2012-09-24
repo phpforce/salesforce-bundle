@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <services>
+
+        <service id="salesforce.soap_client"
+                 class="PhpForce\SoapClient\Client"
+                 factory-service="salesforce.soap_client.builder"
+                 factory-method="build">
+        </service>
+
+        <service id="salesforce.soap_client.builder"
+                 class="PhpForce\SoapClient\ClientBuilder">
+            <argument>%salesforce.soap_client.wsdl%</argument>
+            <argument>%salesforce.soap_client.username%</argument>
+            <argument>%salesforce.soap_client.password%</argument>
+            <argument>%salesforce.soap_client.token%</argument>
+        </service>
+
+    </services>
+
+</container>

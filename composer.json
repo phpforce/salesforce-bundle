@@ -1,0 +1,28 @@
+{
+    "name": "phpforce/salesforce-bundle",
+    "type": "symfony-bundle",
+    "description": "A Symfony2 bundle for the PHPForce Salesforce library",
+    "keywords": [ "salesforce", "crm", "soap" ],
+    "homepage": "https://github.com/phpforce/salesforce-bundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "David de Boer",
+            "email": "david@ddeboer.nl",
+            "homepage": "http://ddeboer.nl"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0",
+        "phpforce/soap-client": "*",
+    },
+    "suggest": {
+        "guzzle/http": "For fetching the latest WSDL from Salesforce"
+    },
+    "autoload": {
+        "psr-0": {
+            "PhpForce\\SalesforceBundle": ""
+        }
+    },
+    "target-dir": "PhpForce/SalesforceBundle"
+}
