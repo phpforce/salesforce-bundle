@@ -18,7 +18,7 @@ class Configuration implements ConfigurationInterface
     public function getConfigTreeBuilder()
     {
         $treeBuilder = new TreeBuilder();
-        $treeBuilder->root('phpforce')
+        $treeBuilder->root('phpforce_salesforce')
             ->children()
                 ->arrayNode('soap_client')->isRequired()
                     ->children()
