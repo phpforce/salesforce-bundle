@@ -1,9 +1,9 @@
 <?php
 
-namespace PhpForce\SalesforceBundle;
+namespace Phpforce\SalesforceBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
-class PhpForceSalesforceBundle extends Bundle
+class PhpforceSalesforceBundle extends Bundle
 {
 }

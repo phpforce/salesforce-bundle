@@ -21,8 +21,8 @@
     },
     "autoload": {
         "psr-0": {
-            "PhpForce\\SalesforceBundle": ""
+            "Phpforce\\SalesforceBundle": ""
         }
     },
-    "target-dir": "PhpForce/SalesforceBundle"
+    "target-dir": "Phpforce/SalesforceBundle"
 }

@@ -7,13 +7,13 @@
     <services>
 
         <service id="salesforce.soap_client"
-                 class="PhpForce\SoapClient\Client"
+                 class="Phpforce\SoapClient\Client"
                  factory-service="salesforce.soap_client.builder"
                  factory-method="build">
         </service>
 
         <service id="salesforce.soap_client.builder"
-                 class="PhpForce\SoapClient\ClientBuilder">
+                 class="Phpforce\SoapClient\ClientBuilder">
             <argument>%salesforce.soap_client.wsdl%</argument>
             <argument>%salesforce.soap_client.username%</argument>
             <argument>%salesforce.soap_client.password%</argument>
