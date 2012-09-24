@@ -6,18 +6,18 @@
 
     <services>
 
-        <service id="salesforce.soap_client"
+        <service id="phpforce_salesforce.soap_client"
                  class="Phpforce\SoapClient\Client"
-                 factory-service="salesforce.soap_client.builder"
+                 factory-service="phpforce_salesforce.soap_client.builder"
                  factory-method="build">
         </service>
 
-        <service id="salesforce.soap_client.builder"
+        <service id="phpforce_salesforce.soap_client.builder"
                  class="Phpforce\SoapClient\ClientBuilder">
-            <argument>%salesforce.soap_client.wsdl%</argument>
-            <argument>%salesforce.soap_client.username%</argument>
-            <argument>%salesforce.soap_client.password%</argument>
-            <argument>%salesforce.soap_client.token%</argument>
+            <argument>%phpforce_salesforce.soap_client.wsdl%</argument>
+            <argument>%phpforce_salesforce.soap_client.username%</argument>
+            <argument>%phpforce_salesforce.soap_client.password%</argument>
+            <argument>%phpforce_salesforce.soap_client.token%</argument>
         </service>
 
     </services>
