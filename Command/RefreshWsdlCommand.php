@@ -47,19 +47,10 @@ class RefreshWsdlCommand extends ContainerAwareCommand
 
         // Get current session id
         $loginResult = $client->getLoginResult();
-        $sessionId = $loginResult->sessionId;
+        $sessionId = $loginResult->getSessionId();
+        $instance = $loginResult->getServerInstance();
 
-        // Get current server instance (Salesforce subdomain)
-        $match = preg_match(
-            '/https:\/\/(?<instance>[^-\.]+)/',
-            $loginResult->serverUrl,
-            $matches
-        );
-        if (!$match || !isset($matches['instance'])) {
-            throw new \RuntimeException('Server instance could not be determined');
-        }
-
-        $url = sprintf('https://%s.salesforce.com', $matches['instance']);
+        $url = sprintf('https://%s.salesforce.com', $instance);
         $guzzle = new Client(
             $url,
             array(
