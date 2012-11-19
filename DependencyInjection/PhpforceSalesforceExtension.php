@@ -26,6 +26,7 @@ class PhpforceSalesforceExtension extends Extension
         $loader = new Loader\XmlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
 
         $loader->load('soap_client.xml');
+        $loader->load('rest_client.xml');
         foreach ($config['soap_client'] as $key => $value) {
             $container->setParameter('Phpforce_salesforce.soap_client.' . $key, $value);
         }
