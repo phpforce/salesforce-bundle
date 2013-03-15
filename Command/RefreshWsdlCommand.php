@@ -21,7 +21,7 @@ class RefreshWsdlCommand extends ContainerAwareCommand
     protected function configure()
     {
         $this
-            ->setName('salesforce:refresh-wsdl')
+            ->setName('phpforce:refresh-wsdl')
             ->setDescription('Refresh Salesforce WSDL')
             ->setHelp(
                 'Refreshing the WSDL itself requires a WSDL, so when using this'
