@@ -8,7 +8,7 @@
 
         <service id="phpforce_salesforce.rest_client"
                  class="Phpforce\RestClient\Client">
-            <argument type="service" id="phpforce_salesforce.soap_client" />
+            <argument type="service" id="phpforce.soap_client" />
         </service>
 
     </services>

@@ -28,11 +28,11 @@ class PhpforceSalesforceExtension extends Extension
         $loader->load('soap_client.xml');
         $loader->load('rest_client.xml');
         foreach ($config['soap_client'] as $key => $value) {
-            $container->setParameter('Phpforce_salesforce.soap_client.' . $key, $value);
+            $container->setParameter('phpforce.soap_client.' . $key, $value);
         }
 
         if (true == $config['soap_client']['logging']) {
-            $builder = $container->getDefinition('phpforce_salesforce.soap_client.builder');
+            $builder = $container->getDefinition('phpforce.soap_client.builder');
 //            $builder->addMethodCall('withLog', array(new Reference('phpforce_salesforce.logger')));
         }
     }

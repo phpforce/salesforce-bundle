@@ -43,7 +43,7 @@ class RefreshWsdlCommand extends ContainerAwareCommand
     {
         $output->writeln('Updating the WSDL file');
 
-        $client = $this->getContainer()->get('phpforce_salesforce.soap_client');
+        $client = $this->getContainer()->get('phpforce.soap_client');
 
         // Get current session id
         $loginResult = $client->getLoginResult();
@@ -66,7 +66,7 @@ class RefreshWsdlCommand extends ContainerAwareCommand
 
         $wsdl = $response->getBody();
         $wsdlFile = $this->getContainer()
-            ->getParameter('phpforce_salesforce.soap_client.wsdl');
+            ->getParameter('phpforce.soap_client.wsdl');
 
         // Write WSDL
         file_put_contents($wsdlFile, $wsdl);
