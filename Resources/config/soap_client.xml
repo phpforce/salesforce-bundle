@@ -7,9 +7,8 @@
     <services>
 
         <service id="phpforce.soap_client"
-                 class="Phpforce\SoapClient\Client"
-                 factory-service="phpforce.soap_client.builder"
-                 factory-method="build">
+                 class="Phpforce\SoapClient\Client">
+            <factory service="phpforce.soap_client.builder" method="build" />
         </service>
         
         <service id="phpforce.soap_client.bulk_saver"
